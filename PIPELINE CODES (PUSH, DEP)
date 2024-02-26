@@ -21,7 +21,7 @@ pipeline {
         }
         stage('push') {
             steps {
-                sh 'docker login -u amitkm158 -p Sanvi@2024'
+                sh 'docker login -u $user -p $password'
                 sh 'docker push $repo'
             }
         }
@@ -42,7 +42,7 @@ pipeline {
         }
         stage('stack') {
             steps {
-                sh 'docker stack deploy -c docker-compose.yml paytm'
+                sh 'docker stack deploy -c docker-compose.yml Paytm'
             }
         }
     }
