@@ -35,14 +35,14 @@ pipeline {
     agent any
 
     stages {
-        stage('check') {
+        stage('checkout') {
             steps {
                 git 'https://github.com/amit9611/dockermsproject.git'
             }
         }
         stage('stack') {
             steps {
-                sh 'docker stack deploy -c docker-compose.yml courses'
+                sh 'docker stack deploy -c docker-compose.yml paytm'
             }
         }
     }
