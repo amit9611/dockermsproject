@@ -35,7 +35,7 @@ pipeline {
     agent any
 
     stages {
-        stage('checkout') {
+        stage('check') {
             steps {
                 git 'https://github.com/amit9611/dockermsproject.git'
             }
